@@ -1,38 +1,118 @@
-.App {
+p {
+  margin-bottom: 0 !important;
+}
+
+.todo__table {
+  width: 480px;
+  height: 480px;
+  padding: 16px;
+  margin: 0 auto;
+  border-radius: 3px;
+  position: relative;
+}
+
+.todo__heading {
+  width: 100%;
+  margin: 16px 0;
+  color: red;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todo__container {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
+  gap: 8px;
+}
+
+.todo__row {
+  width: 100%;
+  height: 38px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.todo__search {
+  width: 100%;
+  border: 1px solid gainsboro;
+  border-radius: 3px;
+  padding-left: 10px;
+}
+
+.todo__create {
+  width: 112px;
+  border: 0;
+  border-radius: 5px;
+  color: aliceblue;
+  background-color: rgb(95, 146, 239);
+}
+
+.todo__filter {
+  width: 100%;
+  height: 38px;
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+}
+
+.todo__button-filter {
+  width: 100%;
+  border: 1px solid gainsboro;
+  border-radius: 5px;
+  color: black;
+  background: transparent;
+}
+
+.todo__list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.todo__item {
+  width: 100%;
+  height: 52px;
+  padding: 5px;
+  border: 1px solid gainsboro;
+  border-radius: 8px;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+.todo__item-name {
+  width: 100%;
+  margin-left: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo__delete {
+  background-color: red;
+  color: aliceblue;
+  border: 0;
+  border-radius: 5px;
+  padding: 8px 12px;
+}
+
+.todo__edit {
+  background-color: rgb(95, 146, 239);
+  color: aliceblue;
+  border: 0;
+  border-radius: 5px;
+  padding: 8px 12px;
+}
+
+.active-button {
+  color: rgb(15, 227, 39);
+  border-color: rgb(15, 227, 39);
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+.btn {
+  width: 100px;
 }
