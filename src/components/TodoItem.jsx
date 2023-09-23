@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { TrashFill, PencilSquare } from "react-bootstrap-icons";
 
 function TodoItem(props) {
@@ -18,7 +18,10 @@ function TodoItem(props) {
       </div>
       <div
         className="todo__edit"
-        onClick={() => props.handleShowUpdate(props.indexTodo)}
+        onClick={() => {
+          props.handleShowUpdate(props.indexTodo);
+          props.handleSetInputValue(props.name);
+        }}
       >
         <PencilSquare />
       </div>

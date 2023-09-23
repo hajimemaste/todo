@@ -9,7 +9,10 @@ function TodoButton(props) {
         className={`todo__button-filter ${
           showButton === "tab1" ? "active-button" : ""
         }`}
-        onClick={() => setShowButton("tab1")}
+        onClick={() => {
+          setShowButton("tab1");
+          props.handleAllButton();
+        }}
       >
         All
       </button>
@@ -17,7 +20,10 @@ function TodoButton(props) {
         className={`todo__button-filter ${
           showButton === "tab2" ? "active-button" : ""
         }`}
-        onClick={() => setShowButton("tab2")}
+        onClick={() => {
+          setShowButton("tab2");
+          props.handleDoneButton();
+        }}
       >
         Done
       </button>
@@ -25,7 +31,10 @@ function TodoButton(props) {
         className={`todo__button-filter ${
           showButton === "tab3" ? "active-button" : ""
         }`}
-        onClick={() => setShowButton("tab3")}
+        onClick={() => {
+          setShowButton("tab3");
+          props.handleInProgressButton();
+        }}
       >
         In-progress
       </button>
